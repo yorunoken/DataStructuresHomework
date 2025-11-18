@@ -12,6 +12,43 @@ void clearScreen()
 #endif
 }
 
+void printAllNodes(struct node *head)
+{
+    if (head == NULL)
+        cout << "List empty" << endl;
+    else
+    {
+        auto temp = head;
+        int i = 0;
+        while (temp != NULL)
+        {
+            cout << "Node " << i << ": [" << temp->data << "] -> " << temp->next << endl;
+            temp = temp->next;
+            i++;
+        }
+    }
+}
+
+int countNodes(struct node *head)
+{
+    int nodeCount = 0;
+    if (head == NULL)
+    {
+        cout << "Empty list" << endl;
+        return 0;
+    }
+    else
+    {
+        auto temp = head;
+        while (temp != NULL)
+        {
+            nodeCount++;
+            temp = temp->next;
+        }
+        return nodeCount;
+    }
+}
+
 struct node *addToStart(struct node *head, int key)
 {
     if (head == NULL)

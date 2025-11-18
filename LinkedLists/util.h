@@ -8,6 +8,8 @@ struct node
 };
 
 void clearScreen();
+void printAllNodes(struct node *head);
+int countNodes(struct node *head);
 struct node *addToStart(struct node *head, int key);
 struct node *removeFromStart(struct node *head);
 struct node *addToEnd(struct node *head, int key);
