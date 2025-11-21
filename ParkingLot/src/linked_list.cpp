@@ -1,6 +1,6 @@
 using namespace std;
 
-#include "linked-list.h"
+#include "linked_list.h"
 
 #include <iostream>
 

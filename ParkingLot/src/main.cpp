@@ -4,8 +4,8 @@ using namespace std;
 #include <utility>
 #include <vector>
 
-#include "linked-list.h"
-#include "lot-logic.h"
+#include "linked_list.h"
+#include "lot_logic.h"
 #include "util.h"
 
 vector<pair<string, MenuOptions>> options = {

@@ -1,7 +1,7 @@
 #ifndef LOT_LOGIC_H
 #define LOT_LOGIC_H
 
-#include "linked-list.h"
+#include "linked_list.h"
 
 Node* AddVehicle(Node* head);
 void ListVehicles(Node* head);
