@@ -5,7 +5,7 @@ using namespace std;
 
 int main()
 {
-    struct node *head = NULL;
+    struct Node *head = NULL;
     int num, selection, index;
 
     while (true)
@@ -32,52 +32,52 @@ int main()
         cout << "0-- cikis" << endl;
         cin >> selection;
 
-        clearScreen();
+        ClearScreen();
         switch (selection)
         {
         case 1:
             cout << "basa eklenecek sayi: " << endl;
             cin >> num;
-            head = addToStart(head, num);
+            head = AddToStart(head, num);
             break;
         case 2:
             cout << "sona eklenecek sayi: " << endl;
             cin >> num;
-            head = addToEnd(head, num);
+            head = AddToEnd(head, num);
             break;
         case 3:
             cout << "ortaya eklenecek sayi: " << endl;
             cin >> num;
             cout << "indeks girin: " << endl;
             cin >> index;
-            head = addBetween(head, num, index);
+            head = AddBetween(head, num, index);
             break;
         case 4:
-            head = removeFromStart(head);
+            head = RemoveFromStart(head);
             break;
         case 5:
-            head = removeFromEnd(head);
+            head = RemoveFromEnd(head);
             break;
         case 6:
             cout << "silinecek elemanin indeksi: " << endl;
             cin >> index;
-            head = removeBetween(head, index);
+            head = RemoveBetween(head, index);
             break;
         case 7:
         {
             cout << "aranacak sayi: " << endl;
             cin >> num;
-            auto node = searchNode(head, num);
+            auto node = SearchNode(head, num);
             cout << "Node: [" << node->data << "] -> " << node->next << endl;
             break;
         }
         case 8:
-            printAllNodes(head);
+            PrintAllNodes(head);
             break;
         case 9:
         {
-            int nodeCount = countNodes(head);
-            cout << "listede ki dugum adeti: " << nodeCount << endl;
+            int node_count = CountNodes(head);
+            cout << "listede ki dugum adeti: " << node_count << endl;
             break;
         }
         case 0:

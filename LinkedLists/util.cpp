@@ -3,7 +3,7 @@
 #include "util.h"
 using namespace std;
 
-void clearScreen()
+void ClearScreen()
 {
 #ifdef _WIN32
     system("cls");
@@ -12,7 +12,7 @@ void clearScreen()
 #endif
 }
 
-void printAllNodes(struct node *head)
+void PrintAllNodes(struct Node *head)
 {
     if (head == NULL)
         cout << "List empty" << endl;
@@ -29,7 +29,7 @@ void printAllNodes(struct node *head)
     }
 }
 
-int countNodes(struct node *head)
+int CountNodes(struct Node *head)
 {
     int nodeCount = 0;
     if (head == NULL)
@@ -49,18 +49,18 @@ int countNodes(struct node *head)
     }
 }
 
-struct node *addToStart(struct node *head, int key)
+struct Node *AddToStart(struct Node *head, int key)
 {
     if (head == NULL)
     {
-        auto temp = new node();
+        auto temp = new Node();
         temp->data = key;
         temp->next = NULL;
         head = temp;
     }
     else
     {
-        auto temp = new node();
+        auto temp = new Node();
         temp->data = key;
         temp->next = head;
         head = temp;
@@ -69,7 +69,7 @@ struct node *addToStart(struct node *head, int key)
     return head;
 }
 
-struct node *removeFromStart(struct node *head)
+struct Node *RemoveFromStart(struct Node *head)
 {
     if (head == NULL)
     {
@@ -85,18 +85,18 @@ struct node *removeFromStart(struct node *head)
     return head;
 }
 
-struct node *addToEnd(struct node *head, int key)
+struct Node *AddToEnd(struct Node *head, int key)
 {
     if (head == NULL)
     {
-        auto temp = new node();
+        auto temp = new Node();
         temp->data = key;
         temp->next = NULL;
         head = temp;
     }
     else
     {
-        auto temp = new node();
+        auto temp = new Node();
         temp->data = key;
         temp->next = NULL;
 
@@ -110,7 +110,7 @@ struct node *addToEnd(struct node *head, int key)
     return head;
 }
 
-struct node *removeFromEnd(struct node *head)
+struct Node *RemoveFromEnd(struct Node *head)
 {
     if (head == NULL)
     {
@@ -137,22 +137,22 @@ struct node *removeFromEnd(struct node *head)
     return head;
 }
 
-struct node *addBetween(struct node *head, int key, int index)
+struct Node *AddBetween(struct Node *head, int key, int index)
 {
     if (index == 0)
     {
-        return addToStart(head, key);
+        return AddToStart(head, key);
     }
 
     if (head == NULL)
     {
-        auto temp = new node();
+        auto temp = new Node();
         temp->data = key;
         temp->next = NULL;
         return temp;
     }
 
-    auto temp = new node();
+    auto temp = new Node();
     temp->data = key;
 
     auto temp2 = head;
@@ -174,7 +174,7 @@ struct node *addBetween(struct node *head, int key, int index)
     return head;
 }
 
-struct node *removeBetween(struct node *head, int index)
+struct Node *RemoveBetween(struct Node *head, int index)
 {
     if (head == NULL)
     {
@@ -184,7 +184,7 @@ struct node *removeBetween(struct node *head, int index)
 
     if (index == 0)
     {
-        return removeFromStart(head);
+        return RemoveFromStart(head);
     }
 
     auto temp = head;
@@ -211,7 +211,7 @@ struct node *removeBetween(struct node *head, int index)
     return head;
 }
 
-struct node *searchNode(struct node *head, int key)
+struct Node *SearchNode(struct Node *head, int key)
 {
     if (head == NULL)
     {

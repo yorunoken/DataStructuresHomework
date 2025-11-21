@@ -1,21 +1,21 @@
 #ifndef UTIL_H
 #define UTIL_H
 
-struct node
+struct Node
 {
     int data;
-    struct node *next;
+    struct Node *next;
 };
 
-void clearScreen();
-void printAllNodes(struct node *head);
-int countNodes(struct node *head);
-struct node *addToStart(struct node *head, int key);
-struct node *removeFromStart(struct node *head);
-struct node *addToEnd(struct node *head, int key);
-struct node *removeFromEnd(struct node *head);
-struct node *addBetween(struct node *head, int key, int index);
-struct node *removeBetween(struct node *head, int index);
-struct node *searchNode(struct node *head, int key);
+void ClearScreen();
+void PrintAllNodes(struct Node *head);
+int CountNodes(struct Node *head);
+struct Node *AddToStart(struct Node *head, int key);
+struct Node *RemoveFromStart(struct Node *head);
+struct Node *AddToEnd(struct Node *head, int key);
+struct Node *RemoveFromEnd(struct Node *head);
+struct Node *AddBetween(struct Node *head, int key, int index);
+struct Node *RemoveBetween(struct Node *head, int index);
+struct Node *SearchNode(struct Node *head, int key);
 
 #endif
