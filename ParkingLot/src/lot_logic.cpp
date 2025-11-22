@@ -100,7 +100,7 @@ Node* RemoveVehicle(Node* head) {
             cout << "\033[?25h";  // show cursor
             cout << "\nAraç başarıyla çıkarıldı!" << endl;
             selecting = false;
-        } else if (key == 27) {  // ESC key
+        } else if (key == KEY_ESC) {
             cout << "\nİptal edildi." << endl;
             selecting = false;
         }

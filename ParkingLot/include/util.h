@@ -3,6 +3,7 @@
 
 enum MenuOptions { ADD_VEHICLE = 0, REMOVE_VEHICLE, LIST_VEHICLES, VEHICLE_COUNT, TOTAL_FEE, EXPORT_TO_LOG, IMPORT_SAVED_VEHICLES, EXIT };
 
+#define KEY_ESC 27
 #ifdef _WIN32
     #include <conio.h>
     #include <windows.h>

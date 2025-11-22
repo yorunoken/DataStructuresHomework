@@ -2,6 +2,8 @@ using namespace std;
 
 #include "util.h"
 
+#include <sys/ioctl.h>
+
 #include <iostream>
 
 int GetKeyPress() {
@@ -21,9 +23,14 @@ int GetKeyPress() {
 
     c = getchar();
     // handling sequences for arrow keys
-    if (c == 27) {
-        getchar();  // skip [
-        c = getchar();
+    if (c == KEY_ESC) {
+        int bytes_waiting;
+        ioctl(STDIN_FILENO, FIONREAD, &bytes_waiting);
+
+        if (bytes_waiting > 0) {
+            getchar();  // skip [
+            c = getchar();
+        }
     }
 
     tcsetattr(STDIN_FILENO, TCSANOW, &old_settings);
